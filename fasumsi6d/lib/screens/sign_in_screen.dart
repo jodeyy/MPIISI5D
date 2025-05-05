@@ -8,6 +8,12 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  final _emailController= TextEditingController();
+  final _passwordController = TextEditingController();
+  final _formKey= GlobalKey<FormState>();
+  bool _isLoading=false;
+  bool _isPasswordVisible=false;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +24,8 @@ class _SignInScreenState extends State<SignInScreen> {
           children: [
             const SizedBox(height: 32),
             TextField(
+              controller: _emailController,
+              keyboardType: ,
               decoration: const InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
